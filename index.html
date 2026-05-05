@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="https://www.paypal.com/sdk/js?client-id=AT4VbWO5gkDfahCjpE81mf_GDupiaFBHb3tvtazvVXS9hFiXym_mHkOyhoHoHFNYrKlRmU-pTs-QScUV&currency=USD&disable-funding=paypal"></script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Univers Cake  </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+  <body>
+
+    <!-- NAV -->
+    <header id="navbar">
+      <div class="nav-inner">
+        <div class="logo">
+          <img src="logo.png" alt="Univers Cake logo" class="logo-img" />
+          <div>
+            <span class="logo-main">Univers Cake<span class="logo-heart"></span></span>
+            <span class="logo-sub"></span>
+          </div>
+        </div>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-label="Open menu">
+          <span></span>
+        </button>
+        <nav class="nav-links">
+          <a href="#home" data-key="nav_home">Acasa</a>
+          <a href="#portfolio" data-key="nav_products">Produse</a>
+          <a href="#contact" data-key="nav_contact">Contact</a>
+          <div class="lang-selector">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="fr">FR</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
+          </div>
+        </nav>
+        <div class="lang-selector lang-selector-desktop">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="ar">AR</button>
+        </div>
+        <button class="cart-btn" id="cartBtn" onclick="openCart()">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="hero-tagline" data-key="hero_tagline">Produsele noastre sunt create special</p>
+        <img class="hero-logo" src="logo.png" alt="Univers Cake logo" />
+        <h1 class="hero-title">Univers<br/><em>Cake</em></h1>
+        <p class="hero-sub" data-key="hero_sub">Rasfatati-va cu cele mai delicioase prajituri si dulciuri,<br/>preparate cu dragoste in laboratorul nostru artizanal.</p>
+        <a href="#produse" class="btn-primary" data-key="hero_btn">Descopera Produsele</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cupcake" />
+      </div>
+    </section>
+
+
+
+    <!-- PRODUCTS -->
+    <section id="portfolio" class="products-section">
+      <div class="section-header">
+        <span class="section-deco">✦</span>
+        <h2 data-key="port_title">Portofoliu Produse</h2>
+        <span class="section-deco">✦</span>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all" data-key="filter_all">Toate</button>
+        <button class="filter-btn" data-filter="candy" data-key="filter_candy">Candy Bar</button>
+        <button class="filter-btn" data-filter="mini" data-key="filter_mini">Miniprajituri</button>
+        <button class="filter-btn" data-filter="tort" data-key="filter_tort">Prajituri</button>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- INFO BANNER -->
+    <section class="info-banner">
+      <div class="info-banner-inner">
+        <div class="info-logo-block">
+          <p class="info-brand">Univers Cake</p>
+          <p data-key="info_desc">Cu atenta supraveghere a maestrului in arta culinara, produsele sunt create pentru a corespunde si a transforma visele dumneavoastra intr-o realitate delicioasa.</p>
+        </div>
+        <div class="info-items">
+          <div class="info-item">
+            <div class="info-icon">🎁</div>
+            <div>
+              <h4 data-key="info_packaging">Ambalare</h4>
+              <p data-key="info_packaging_desc">La cerere ambalaje speciale artizanale din cele mai frumoase.</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">⭐</div>
+            <div>
+              <h4 data-key="info_quality">Calitate</h4>
+              <p data-key="info_quality_desc">Ingrediente premium selectionate cu grija pentru fiecare produs.</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🕐</div>
+            <div>
+              <h4 data-key="info_hours">Program</h4>
+              <p data-key="info_hours_desc">Luni–Vineri: 9:00–21:00<br/>Sam–Dum: 9:00–21:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4 data-key="footer_surprize">Surprize</h4>
+          <p data-key="footer_surprize_desc">Fa o surpriza celor dragi! Alege un DRC, achizitioneaza si mai primesti tortul la adresa dorita. Servicii reale in fiecare zi.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-key="footer_contact">Contact</h4>
+          <p data-key="footer_contact_info">Str. Strada Godescu, nr. 17<br/>Tel: 0748.278.237<br/>Email: Univers Cake@yahoo.com</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-key="footer_order">Quick Order</h4>
+          <form class="footer-form" id="footerForm"
+      action="https://formspree.io/f/mpqbpydd"
+      method="POST">
+            <input type="text" name="NAME" data-placeholder="footer_form_name" required />
+            <input type="email" name="email" data-placeholder="footer_form_email" required />
+            <input type="text" name="message" data-placeholder="footer_form_message" />
+            <button type="submit" class="btn-primary small" data-key="footer_form_btn">Send</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-key="footer_copyright">&copy; 2026 Univers Cake. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- CART SIDEBAR -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h3 data-key="cart_title">My Cart</h3>
+        <button class="cart-close" id="cartClose">&times;</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p class="cart-empty" data-key="cart_empty">Your cart is empty.</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span data-key="cart_total_label">Total:</span>
+          <span id="cartTotal">0.00 DH</span>
+        </div>
+        <button class="btn-primary full" id="checkoutBtn" data-key="cart_checkout">Order Now</button>
+      </div>
+    </aside>
+
+    <!-- CHECKOUT MODAL -->
+    <div class="checkout-overlay" id="checkoutOverlay"></div>
+    <div class="checkout-modal" id="checkoutModal">
+      <div class="checkout-header">
+        <h3 data-key="checkout_title">Finalizare comanda</h3>
+        <button class="checkout-close" id="checkoutClose">&times;</button>
+      </div>
+      <div class="checkout-content">
+        <div class="checkout-summary">
+          <h4 data-key="checkout_summary">Sumar comanda</h4>
+          <div id="checkoutItems"></div>
+          <div class="checkout-total">
+            <span data-key="cart_total_label">Total:</span>
+            <span id="checkoutTotal">0.00 DH</span>
+          </div>
+        </div>
+        <form class="checkout-form" id="checkoutForm">
+          <h4 data-key="checkout_info">Informatii de livrare</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName" data-key="checkout_first_name">Prenume</label>
+              <input type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName" data-key="checkout_last_name">Nume</label>
+              <input type="text" id="lastName" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" data-key="checkout_email">Email</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone" data-key="checkout_phone">Telefon</label>
+            <input type="tel" id="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="address" data-key="checkout_address">Adresa</label>
+            <textarea id="address" required></textarea>
+          </div>
+
+          <h4 data-key="checkout_payment">Metoda de plata</h4>
+          <div class="payment-methods">
+            <label class="payment-method">
+              <input type="radio" name="payment" value="card" checked>
+              <span data-key="checkout_card">Card bancar</span>
+            </label>
+            <label class="payment-method">
+              <input type="radio" name="payment" value="paypal">
+              <span>PayPal</span>
+            </label>
+          </div>
+
+          <div id="paypal-button-container" style="display: none; margin: 20px 0;"></div>
+
+          <div class="card-details" id="cardDetails">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cardNumber" data-key="checkout_card_number">Numar card</label>
+                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="expiryDate" data-key="checkout_expiry">Data expirare</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+              </div>
+              <div class="form-group">
+                <label for="cvv" data-key="checkout_cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" maxlength="4">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cardName" data-key="checkout_card_name">Nume pe card</label>
+              <input type="text" id="cardName" placeholder="JOHN DOE">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary full" data-key="checkout_pay">Plateste acum</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <script type="module">
+      import('./main.js');
+    </script>
+
+    <script>
+      // PayPal Button Logic
+      const paymentRadios = document.querySelectorAll('input[name="payment"]');
+      const paypalContainer = document.getElementById('paypal-button-container');
+      const cardDetails = document.getElementById('cardDetails');
+
+      paymentRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+          if (this.value === 'paypal') {
+            paypalContainer.style.display = 'block';
+            cardDetails.style.display = 'none';
+          } else {
+            paypalContainer.style.display = 'none';
+            cardDetails.style.display = 'block';
+          }
+        });
+      });
+
+      // Initialize PayPal button
+      paypal.Buttons({
+        createOrder: (data, actions) => {
+          const checkoutTotal = document.getElementById('checkoutTotal').textContent;
+          const total = parseFloat(checkoutTotal.replace(/[^\d.]/g, ''));
+          
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: total.toFixed(2)
+              }
+            }]
+          });
+        },
+        onApprove: (data, actions) => {
+          return actions.order.capture().then(() => {
+            cart = [];
+            saveCart();
+            updateCartUI();
+            closeCheckout();
+            showToast("Payment successful!");
+          });
+        }
+      }).render('#paypal-button-container');
+    </script>
+  </body>
+</html>
